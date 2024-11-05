@@ -36,7 +36,7 @@ export default class controlSelect extends control {
     if (type === 'checkbox-group' && data.required) {
       const self = this
       const defaultOnRender = this.onRender.bind(this)
-      this.onRender = function() {
+      this.onRender = function () {
         defaultOnRender()
         self.groupRequired()
       }
@@ -163,7 +163,7 @@ export default class controlSelect extends control {
       }
     }
     const toggleRequired = (checkboxes, isValid) => {
-      [].forEach.call(checkboxes, cb => {
+      ;[].forEach.call(checkboxes, cb => {
         if (isValid) {
           cb.removeAttribute('required')
         } else {
@@ -193,9 +193,7 @@ export default class controlSelect extends control {
       const selectedOptions = this.config.userData.slice()
 
       if (this.config.type === 'select') {
-        $(this.dom)
-          .val(selectedOptions)
-          .prop('selected', true)
+        $(this.dom).val(selectedOptions).prop('selected', true)
       } else if (this.config.type.endsWith('-group')) {
         if (this.config.type === 'checkbox-group') {
           //clear all checked elements prior to setting them from userData

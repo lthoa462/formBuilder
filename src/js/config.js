@@ -25,6 +25,9 @@ export const defaultOptions = {
     'select',
     'text',
     'textarea',
+    'area',
+    'table',
+    'tableBuilder',
   ],
   controlPosition: 'right',
   dataType: 'json',
@@ -45,7 +48,7 @@ export const defaultOptions = {
     error: /* istanbul ignore next */ error => {
       console.log(error)
     },
-    success:  /* istanbul ignore next */ success => {
+    success: /* istanbul ignore next */ success => {
       console.log(success)
     },
     warning: /* istanbul ignore next */ warning => {
